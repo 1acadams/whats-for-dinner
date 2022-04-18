@@ -1,9 +1,9 @@
-<h1>Protein</h1>
-<h2>Please type what proteins you have in your kitchen. An example of a protein is chicken, beef, tofu and beans. </h2>
+<h1>Starch</h1>
+<h2>Please type what starches you have in your kitchen. A starch includes pasta, rice and potatoes. </h2>
 <% if local_assigns.has_key? :status_msg %>
     <p><%= status_msg %></p>
 <% end %>
-<%= form_with scope: "protein", url: input_protein_path, method: :put do |form|%>
+<%= form_with scope: "starch", url: input_starch_path, method: :put do |form|%>
 
     <div>
         <%= label_tag ("input 1")%>
@@ -36,14 +36,5 @@
     
 <% end %>
 
-<%#@input1 = params[:input1] %>
-<%#@input2 = params[:input2] %>
-<%#@input3 = params[:input3] %>
-<%#@input4 = params[:input4] %>
-<%#@input5 = params[:input5] %>
-<%#recipe=Recipe1.new(protein: [@input1.to_s,  @input2.to_s, @input3.to_s, @input4.to_s, @input5.to_s])%>
-<%#recipe.save%>
-
-<p><%= link_to 'Back', index_path%></p>
-<p><%= link_to 'Next', veg_path%></p>
-
+<p><%= link_to 'Back', oils_path%></p>
+<p><%= link_to 'Next', results_path%></p>

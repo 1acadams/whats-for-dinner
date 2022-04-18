@@ -1,14 +1,19 @@
 Rails.application.routes.draw do
+  #get 'recipe1', to: 'recipe1#index', as: 'recipe1'
+  #get 'recipe1/:id', to: 'recipe1#show', as: 'recipe1'
+
   #get 'protein', to: 'home#protein', as: 'protein'
   root "home#index"
 
-  post 'protein', to: 'home#input_protein', as: 'input_protein'
+  put 'protein', to: 'home#input_protein', as: 'input_protein'
 
   post 'veg', to: 'home#input_veg', as: 'input_veg'
 
   post 'aromatics', to: 'home#input_aromatics', as: 'input_aromatics'
 
   post 'oils', to: 'home#input_oils', as: 'input_oils'
+
+  post 'starch', to: 'home#input_starch', as: 'input_starch'
 
   get 'index', to: 'home#index', as: 'index'
 
@@ -19,6 +24,10 @@ Rails.application.routes.draw do
   get 'aromatics', to: 'home#aromatics', as: 'aromatics'
 
   get 'oils', to: 'home#oils', as: 'oils'
+
+  get 'starch', to: 'home#starch', as: 'starch'
+
+  get 'results', to: 'home#results', as: 'results'
 
   #get 'input/:action' to 'input#show'
   get "/home", to: "home#index"
