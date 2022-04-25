@@ -15,11 +15,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: rails_user
   password: Viol@pl@yer16
+  #password: dolphin!
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: recipe_generator_development
+  #database: csc151
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,6 +29,7 @@ development:
 test:
   <<: *default
   database: recipe_generator_test
+  #database: csc151
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
